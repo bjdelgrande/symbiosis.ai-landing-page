@@ -1,173 +1,129 @@
-import React from 'react';
-import { 
-  CheckIcon, 
-  SparklesIcon, 
-  ChartBarIcon, 
-  RocketLaunchIcon 
-} from 'lucide-react';
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Symbiosis.ai - Partnership Intelligence Platform</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@0.263.1/dist/browser.min.js"></script>
+</head>
+<body class="bg-white text-gray-900">
+  <div class="max-w-7xl mx-auto">
+    <!-- Navigation -->
+    <nav class="flex items-center justify-between p-6 lg:px-8 bg-gradient-to-r from-blue-50 to-white shadow-sm">
+      <div class="flex lg:flex-1">
+        <span class="text-2xl font-bold text-blue-600">symbiosis<span class="text-gray-400">.ai</span></span>
+      </div>
+      <div class="hidden lg:flex lg:gap-x-8">
+        <a href="#features" class="text-sm font-medium text-gray-700 transition hover:text-blue-600">Features</a>
+        <a href="#how-it-works" class="text-sm font-medium text-gray-700 transition hover:text-blue-600">How It Works</a>
+        <a href="#pricing" class="text-sm font-medium text-gray-700 transition hover:text-blue-600">Pricing</a>
+      </div>
+      <div class="lg:flex lg:flex-1 lg:justify-end">
+        <div class="flex items-center space-x-4">
+          <a href="#" class="text-sm font-medium text-gray-700 hover:text-blue-600">Log in</a>
+          <a href="#" class="rounded-full bg-blue-600 px-4 py-2 text-sm font-semibold text-white shadow-md transition hover:bg-blue-700 hover:shadow-lg">Get Started</a>
+        </div>
+      </div>
+    </nav>
 
-const SymbiosisLanding = () => {
-  return (
-    <div className="bg-white">
-      {/* Modern Gradient Header Navigation */}
-      <header className="sticky top-0 z-50 bg-gradient-to-r from-blue-50 to-white shadow-sm">
-        <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8">
-          <div className="flex lg:flex-1">
-            <span className="text-2xl font-bold">
-              <span className="text-blue-600">symbiosis</span>
-              <span className="text-gray-400">.ai</span>
-            </span>
-          </div>
-          <div className="hidden lg:flex lg:gap-x-8">
-            <a href="#features" className="text-sm font-medium text-gray-700 transition hover:text-blue-600">Features</a>
-            <a href="#how-it-works" className="text-sm font-medium text-gray-700 transition hover:text-blue-600">How It Works</a>
-            <a href="#pricing" className="text-sm font-medium text-gray-700 transition hover:text-blue-600">Pricing</a>
-          </div>
-          <div className="lg:flex lg:flex-1 lg:justify-end">
-            <div className="flex items-center space-x-4">
-              <a href="#" className="text-sm font-medium text-gray-700 hover:text-blue-600">Log in</a>
-              <a 
-                href="#" 
-                className="rounded-full bg-blue-600 px-4 py-2 text-sm font-semibold text-white shadow-md transition hover:bg-blue-700 hover:shadow-lg"
-              >
-                Get Started
-              </a>
-            </div>
-          </div>
-        </nav>
-      </header>
-
-      {/* Hero Section with Elegant Gradient and Modern Layout */}
-      <div className="relative isolate overflow-hidden bg-white px-6 py-24 lg:overflow-visible lg:px-0">
-        <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-2">
-          <div className="lg:col-span-2 lg:col-start-1 lg:row-start-1 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
-            <div className="lg:pr-4">
-              <div className="lg:max-w-lg">
-                <p className="text-base font-semibold leading-7 text-blue-600">
-                  Partnership Intelligence Platform
-                </p>
-                <h1 className="mt-2 text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
-                  AI-Powered Partnership Marketing
-                </h1>
-                <p className="mt-6 text-xl leading-8 text-gray-700">
-                  Revolutionize lead generation with intelligent AI that transforms how B2B companies collaborate and grow.
-                </p>
-                <div className="mt-10 flex items-center gap-x-6">
-                  <a 
-                    href="#" 
-                    className="rounded-full bg-blue-600 px-5 py-3 text-sm font-semibold text-white shadow-md transition hover:bg-blue-700"
-                  >
-                    Book a Demo
-                  </a>
-                  <a href="#" className="text-sm font-semibold leading-6 text-gray-900 hover:text-blue-600">
-                    Learn More →
-                  </a>
-                </div>
+    <!-- Hero Section -->
+    <div class="relative isolate overflow-hidden bg-white px-6 py-24 lg:overflow-visible lg:px-0">
+      <div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-2">
+        <div class="lg:col-span-2 lg:col-start-1 lg:row-start-1 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
+          <div class="lg:pr-4">
+            <div class="lg:max-w-lg">
+              <p class="text-base font-semibold leading-7 text-blue-600">Partnership Intelligence Platform</p>
+              <h1 class="mt-2 text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">AI-Powered Partnership Marketing</h1>
+              <p class="mt-6 text-xl leading-8 text-gray-700">Revolutionize lead generation with intelligent AI that transforms how B2B companies collaborate and grow.</p>
+              <div class="mt-10 flex items-center gap-x-6">
+                <a href="#" class="rounded-full bg-blue-600 px-5 py-3 text-sm font-semibold text-white shadow-md transition hover:bg-blue-700">Book a Demo</a>
+                <a href="#" class="text-sm font-semibold leading-6 text-gray-900 hover:text-blue-600">Learn More →</a>
               </div>
             </div>
           </div>
-          <div className="-ml-12 -mt-12 p-12 lg:sticky lg:top-4 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden">
-            <img 
-              alt="Symbiosis AI Dashboard" 
-              src="/api/placeholder/600/400" 
-              className="w-[48rem] max-w-none rounded-xl bg-gray-900 shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem]" 
-            />
-          </div>
+        </div>
+        <div class="-ml-12 -mt-12 p-12 lg:sticky lg:top-4 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden">
+          <img src="/api/placeholder/600/400" alt="Symbiosis AI Dashboard" class="w-[48rem] max-w-none rounded-xl bg-gray-900 shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem]">
         </div>
       </div>
-
-      {/* Features Section with Icons and Clean Design */}
-      <div className="bg-gray-50 py-24 sm:py-32" id="features">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl text-center">
-            <h2 className="text-base font-semibold leading-7 text-blue-600">
-              Partnership Intelligence
-            </h2>
-            <p className="mt-2 text-4xl font-bold tracking-tight text-gray-900">
-              Transform Partner Lead Generation
-            </p>
-          </div>
-          <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
-            <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-3 lg:gap-y-16">
-              {[
-                {
-                  icon: SparklesIcon,
-                  name: 'AI-Powered Asset Creation',
-                  description: 'Generate co-branded materials with intelligent, context-aware AI tools.'
-                },
-                {
-                  icon: ChartBarIcon,
-                  name: 'Advanced Tracking',
-                  description: 'Precise partner lead attribution with real-time, comprehensive analytics.'
-                },
-                {
-                  icon: RocketLaunchIcon,
-                  name: 'Ecosystem Growth',
-                  description: 'Smart partner matching and collaboration tools to accelerate partnerships.'
-                }
-              ].map((feature) => (
-                <div key={feature.name} className="relative pl-16">
-                  <dt className="text-base font-semibold leading-7 text-gray-900">
-                    <div className="absolute left-0 top-0 flex h-12 w-12 items-center justify-center rounded-lg bg-blue-600 text-white">
-                      <feature.icon className="h-6 w-6" />
-                    </div>
-                    {feature.name}
-                  </dt>
-                  <dd className="mt-2 text-base leading-7 text-gray-600">
-                    {feature.description}
-                  </dd>
-                </div>
-              ))}
-            </dl>
-          </div>
-        </div>
-      </div>
-
-      {/* CTA Section with Modern Gradient */}
-      <div className="bg-gradient-to-br from-blue-600 to-indigo-700 py-24 sm:py-32">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl text-center">
-            <h2 className="text-4xl font-bold tracking-tight text-white">
-              Ready to Supercharge Your Partnerships?
-            </h2>
-            <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-blue-100">
-              Join innovative B2B companies leveraging AI to transform partnership marketing and drive unprecedented growth.
-            </p>
-            <div className="mt-10 flex items-center justify-center gap-x-6">
-              <a 
-                href="#" 
-                className="rounded-full bg-white px-5 py-3 text-sm font-semibold text-blue-600 shadow-md transition hover:bg-blue-50"
-              >
-                Book a Demo
-              </a>
-              <a 
-                href="#" 
-                className="text-sm font-semibold leading-6 text-white hover:text-blue-100"
-              >
-                Learn More →
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Footer */}
-      <footer className="bg-white">
-        <div className="mx-auto max-w-7xl px-6 py-12 md:flex md:items-center md:justify-between lg:px-8">
-          <div className="flex justify-center space-x-6 md:order-2">
-            <a href="#" className="text-gray-400 hover:text-blue-600">Twitter</a>
-            <a href="#" className="text-gray-400 hover:text-blue-600">LinkedIn</a>
-            <a href="#" className="text-gray-400 hover:text-blue-600">Email</a>
-          </div>
-          <div className="mt-8 md:order-1 md:mt-0">
-            <p className="text-center text-xs leading-5 text-gray-500">
-              &copy; 2024 Symbiosis.ai. All rights reserved.
-            </p>
-          </div>
-        </div>
-      </footer>
     </div>
-  );
-};
 
-export default SymbiosisLanding;
+    <!-- Features Section -->
+    <div class="bg-gray-50 py-24 sm:py-32" id="features">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="mx-auto max-w-2xl text-center">
+          <h2 class="text-base font-semibold leading-7 text-blue-600">Partnership Intelligence</h2>
+          <p class="mt-2 text-4xl font-bold tracking-tight text-gray-900">Transform Partner Lead Generation</p>
+        </div>
+        <div class="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
+          <dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-3 lg:gap-y-16">
+            <div class="relative pl-16">
+              <dt class="text-base font-semibold leading-7 text-gray-900">
+                <div class="absolute left-0 top-0 flex h-12 w-12 items-center justify-center rounded-lg bg-blue-600 text-white">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sparkles"><path d="M12 3v12"></path><path d="M12 21v-6"></path><path d="M16.5 6l-4.5 4.5"></path><path d="M7.5 18l4.5-4.5"></path></svg>
+                </div>
+                AI-Powered Asset Creation
+              </dt>
+              <dd class="mt-2 text-base leading-7 text-gray-600">Generate co-branded materials with intelligent, context-aware AI tools.</dd>
+            </div>
+            <div class="relative pl-16">
+              <dt class="text-base font-semibold leading-7 text-gray-900">
+                <div class="absolute left-0 top-0 flex h-12 w-12 items-center justify-center rounded-lg bg-blue-600 text-white">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chart-bar"><path d="M12 20V10"></path><path d="M18 20V4"></path><path d="M6 20v-6"></path></svg>
+                </div>
+                Advanced Tracking
+              </dt>
+              <dd class="mt-2 text-base leading-7 text-gray-600">Precise partner lead attribution with real-time, comprehensive analytics.</dd>
+            </div>
+            <div class="relative pl-16">
+              <dt class="text-base font-semibold leading-7 text-gray-900">
+                <div class="absolute left-0 top-0 flex h-12 w-12 items-center justify-center rounded-lg bg-blue-600 text-white">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-rocket-launch"><path d="M12 2v6l-3 3"></path><path d="M12 8c1.5 0 3-.5 4-1 1-.5 2-1 3-1"></path><path d="M12 8v6l3 3"></path><path d="M12 14c-1.5 0-3 .5-4 1-1 .5-2 1-3 1"></path><path d="M3 21h18"></path></svg>
+                </div>
+                Ecosystem Growth
+              </dt>
+              <dd class="mt-2 text-base leading-7 text-gray-600">Smart partner matching and collaboration tools to accelerate partnerships.</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA Section -->
+    <div class="bg-gradient-to-br from-blue-600 to-indigo-700 py-24 sm:py-32">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="mx-auto max-w-2xl text-center">
+          <h2 class="text-4xl font-bold tracking-tight text-white">Ready to Supercharge Your Partnerships?</h2>
+          <p class="mx-auto mt-6 max-w-xl text-lg leading-8 text-blue-100">Join innovative B2B companies leveraging AI to transform partnership marketing and drive unprecedented growth.</p>
+          <div class="mt-10 flex items-center justify-center gap-x-6">
+            <a href="#" class="rounded-full bg-white px-5 py-3 text-sm font-semibold text-blue-600 shadow-md transition hover:bg-blue-50">Book a Demo</a>
+            <a href="#" class="text-sm font-semibold leading-6 text-white hover:text-blue-100">Learn More →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-white">
+      <div class="mx-auto max-w-7xl px-6 py-12 md:flex md:items-center md:justify-between lg:px-8">
+        <div class="flex justify-center space-x-6 md:order-2">
+          <a href="#" class="text-gray-400 hover:text-blue-600">Twitter</a>
+          <a href="#" class="text-gray-400 hover:text-blue-600">LinkedIn</a>
+          <a href="#" class="text-gray-400 hover:text-blue-600">Email</a>
+        </div>
+        <div class="mt-8 md:order-1 md:mt-0">
+          <p class="text-center text-xs leading-5 text-gray-500">
+            &copy; 2024 Symbiosis.ai. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    // Initialize Lucide icons
+    lucide.createIcons();
+  </script>
+</body>
+</html>
