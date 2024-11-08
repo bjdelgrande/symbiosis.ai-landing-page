@@ -7,31 +7,41 @@
   <style>
     /* Reset and basic setup */
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Inter', sans-serif; color: #333; line-height: 1.6; background-color: #f7f8fa; }
+    body { font-family: 'Inter', sans-serif; color: #E0E0E0; line-height: 1.6; background-color: #1A1A1A; }
 
     /* Container and layout */
     .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
     .header, .content, .footer { text-align: center; padding: 50px 20px; }
 
     /* Header */
-    .header h1 { font-size: 3em; color: #1d1f21; font-weight: 700; margin-bottom: 15px; }
-    .header p { font-size: 1.2em; color: #606060; max-width: 800px; margin: 0 auto; }
+    .header h1 { font-size: 3em; color: #E0E0E0; font-weight: 700; margin-bottom: 15px; }
+    .header p { font-size: 1.2em; color: #B0B0B0; max-width: 800px; margin: 0 auto; }
 
     /* Main content section */
-    .content h2 { font-size: 2.4em; margin: 40px 0 20px; color: #1d1f21; font-weight: 600; }
-    .content p { font-size: 1em; color: #606060; max-width: 800px; margin: 0 auto; }
+    .content h2 { font-size: 2.4em; margin: 40px 0 20px; color: #E0E0E0; font-weight: 600; }
+    .content p { font-size: 1em; color: #A0A0A0; max-width: 800px; margin: 0 auto; }
     .content .features { display: flex; flex-direction: column; align-items: center; gap: 25px; margin-top: 30px; }
-    .feature { background: #fff; border-radius: 12px; box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05); padding: 30px; width: 90%; max-width: 400px; transition: transform 0.2s ease-in-out; }
+    .feature { background: #2A2A2A; border-radius: 12px; box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3); padding: 30px; width: 90%; max-width: 400px; transition: transform 0.2s ease-in-out; }
     .feature:hover { transform: translateY(-5px); }
-    .feature h3 { color: #0072F5; font-size: 1.4em; margin-bottom: 12px; font-weight: 600; }
-    .feature p { font-size: 0.95em; color: #555; }
+    .feature h3 { color: #00A8CE; font-size: 1.4em; margin-bottom: 12px; font-weight: 600; }
+    .feature p { font-size: 0.95em; color: #B0B0B0; }
 
     /* CTA button */
-    .cta-button { display: inline-block; margin: 40px 0; padding: 15px 40px; color: #fff; background: linear-gradient(135deg, #0072F5, #00CFFD); border: none; border-radius: 8px; font-size: 1em; font-weight: 600; cursor: pointer; text-decoration: none; transition: background 0.3s ease; }
-    .cta-button:hover { background: linear-gradient(135deg, #005BBB, #00A8CE); }
+    .cta-button { display: inline-block; margin: 40px 0; padding: 15px 40px; color: #fff; background: linear-gradient(135deg, #00A8CE, #0072F5); border: none; border-radius: 8px; font-size: 1em; font-weight: 600; cursor: pointer; text-decoration: none; transition: background 0.3s ease; }
+    .cta-button:hover { background: linear-gradient(135deg, #0072F5, #005BBB); }
+
+    /* Waitlist form */
+    .waitlist-form { display: none; background: #2A2A2A; border-radius: 12px; padding: 30px; margin-top: 30px; box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3); max-width: 500px; margin: 0 auto; }
+    .waitlist-form h3 { color: #E0E0E0; margin-bottom: 20px; font-weight: 600; font-size: 1.5em; }
+    .form-group { margin-bottom: 15px; }
+    .form-group label { display: block; font-size: 0.9em; color: #B0B0B0; margin-bottom: 5px; }
+    .form-group input { width: 100%; padding: 10px; border: 1px solid #444; border-radius: 5px; background: #1A1A1A; color: #E0E0E0; }
+    .form-group input::placeholder { color: #666; }
+    .submit-button { width: 100%; padding: 12px; color: #fff; background: linear-gradient(135deg, #00A8CE, #0072F5); border: none; border-radius: 8px; font-size: 1em; font-weight: 600; cursor: pointer; transition: background 0.3s ease; }
+    .submit-button:hover { background: linear-gradient(135deg, #0072F5, #005BBB); }
 
     /* Footer */
-    .footer { font-size: 0.9em; color: #aaa; padding-top: 30px; border-top: 1px solid #e1e1e1; }
+    .footer { font-size: 0.9em; color: #666; padding-top: 30px; border-top: 1px solid #333; }
   </style>
 </head>
 <body>
@@ -65,7 +75,31 @@
       </div>
 
       <!-- Call-to-Action Button -->
-      <a href="#signup" class="cta-button">Get Started for Free</a>
+      <button class="cta-button" onclick="toggleForm()">Join the Waitlist</button>
+
+      <!-- Waitlist Form -->
+      <div class="waitlist-form" id="waitlistForm">
+        <h3>Join the Waitlist</h3>
+        <form>
+          <div class="form-group">
+            <label for="firstName">First Name</label>
+            <input type="text" id="firstName" placeholder="Enter your first name">
+          </div>
+          <div class="form-group">
+            <label for="lastName">Last Name</label>
+            <input type="text" id="lastName" placeholder="Enter your last name">
+          </div>
+          <div class="form-group">
+            <label for="companyName">Company Name</label>
+            <input type="text" id="companyName" placeholder="Enter your company name">
+          </div>
+          <div class="form-group">
+            <label for="email">Work Email</label>
+            <input type="email" id="email" placeholder="Enter your work email">
+          </div>
+          <button type="submit" class="submit-button">Submit</button>
+        </form>
+      </div>
     </div>
   </div>
 
@@ -75,10 +109,11 @@
   </div>
 
   <script>
-    // JavaScript for any interactivity or form submission handling
-    document.querySelector('.cta-button').addEventListener('click', function() {
-      alert('Thank you for your interest! Our team will reach out shortly.');
-    });
+    // JavaScript to toggle form visibility
+    function toggleForm() {
+      const form = document.getElementById('waitlistForm');
+      form.style.display = form.style.display === 'block' ? 'none' : 'block';
+    }
   </script>
 </body>
 </html>
