@@ -3,127 +3,80 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Symbiosis.ai - Partnership Intelligence Platform</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://unpkg.com/lucide@0.263.1/dist/browser.min.js"></script>
+  <title>Symbiosys.AI - Smarter Partnerships</title>
+  <style>
+    /* Basic CSS reset */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: Arial, sans-serif; color: #333; line-height: 1.6; background-color: #f9f9f9; }
+
+    /* Container and layout */
+    .container { max-width: 960px; margin: 0 auto; padding: 20px; }
+    .header, .content, .footer { text-align: center; padding: 40px 20px; }
+
+    /* Header */
+    .header h1 { font-size: 2.5em; color: #4a90e2; }
+    .header p { font-size: 1.2em; color: #666; }
+
+    /* Main content section */
+    .content h2 { font-size: 2em; margin: 20px 0; color: #333; }
+    .content p { font-size: 1em; color: #666; max-width: 800px; margin: 0 auto; }
+    .content .features { display: flex; flex-direction: column; align-items: center; }
+    .feature { background: #fff; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); padding: 20px; width: 90%; margin: 15px 0; max-width: 500px; }
+    .feature h3 { color: #4a90e2; margin-bottom: 10px; }
+
+    /* CTA button */
+    .cta-button { display: inline-block; margin: 30px 0; padding: 12px 30px; color: #fff; background-color: #4a90e2; border: none; border-radius: 5px; font-size: 1em; cursor: pointer; text-decoration: none; }
+    .cta-button:hover { background-color: #3a70b2; }
+
+    /* Footer */
+    .footer { font-size: 0.9em; color: #aaa; }
+  </style>
 </head>
-<body class="bg-white text-gray-900">
-  <div class="max-w-7xl mx-auto">
-    <!-- Navigation -->
-    <nav class="flex items-center justify-between p-6 lg:px-8 bg-gradient-to-r from-blue-50 to-white shadow-sm">
-      <div class="flex lg:flex-1">
-        <span class="text-2xl font-bold text-blue-600">symbiosis<span class="text-gray-400">.ai</span></span>
-      </div>
-      <div class="hidden lg:flex lg:gap-x-8">
-        <a href="#features" class="text-sm font-medium text-gray-700 transition hover:text-blue-600">Features</a>
-        <a href="#how-it-works" class="text-sm font-medium text-gray-700 transition hover:text-blue-600">How It Works</a>
-        <a href="#pricing" class="text-sm font-medium text-gray-700 transition hover:text-blue-600">Pricing</a>
-      </div>
-      <div class="lg:flex lg:flex-1 lg:justify-end">
-        <div class="flex items-center space-x-4">
-          <a href="#" class="text-sm font-medium text-gray-700 hover:text-blue-600">Log in</a>
-          <a href="#" class="rounded-full bg-blue-600 px-4 py-2 text-sm font-semibold text-white shadow-md transition hover:bg-blue-700 hover:shadow-lg">Get Started</a>
-        </div>
-      </div>
-    </nav>
+<body>
 
-    <!-- Hero Section -->
-    <div class="relative isolate overflow-hidden bg-white px-6 py-24 lg:overflow-visible lg:px-0">
-      <div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-2">
-        <div class="lg:col-span-2 lg:col-start-1 lg:row-start-1 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
-          <div class="lg:pr-4">
-            <div class="lg:max-w-lg">
-              <p class="text-base font-semibold leading-7 text-blue-600">Partnership Intelligence Platform</p>
-              <h1 class="mt-2 text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">AI-Powered Partnership Marketing</h1>
-              <p class="mt-6 text-xl leading-8 text-gray-700">Revolutionize lead generation with intelligent AI that transforms how B2B companies collaborate and grow.</p>
-              <div class="mt-10 flex items-center gap-x-6">
-                <a href="#" class="rounded-full bg-blue-600 px-5 py-3 text-sm font-semibold text-white shadow-md transition hover:bg-blue-700">Book a Demo</a>
-                <a href="#" class="text-sm font-semibold leading-6 text-gray-900 hover:text-blue-600">Learn More →</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="-ml-12 -mt-12 p-12 lg:sticky lg:top-4 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden">
-          <img src="/api/placeholder/600/400" alt="Symbiosis AI Dashboard" class="w-[48rem] max-w-none rounded-xl bg-gray-900 shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem]">
-        </div>
-      </div>
+  <!-- Header Section -->
+  <div class="container">
+    <div class="header">
+      <h1>Welcome to Symbiosys.AI</h1>
+      <p>Transforming partnerships with smarter AI-driven landing pages.</p>
     </div>
 
-    <!-- Features Section -->
-    <div class="bg-gray-50 py-24 sm:py-32" id="features">
-      <div class="mx-auto max-w-7xl px-6 lg:px-8">
-        <div class="mx-auto max-w-2xl text-center">
-          <h2 class="text-base font-semibold leading-7 text-blue-600">Partnership Intelligence</h2>
-          <p class="mt-2 text-4xl font-bold tracking-tight text-gray-900">Transform Partner Lead Generation</p>
-        </div>
-        <div class="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
-          <dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-3 lg:gap-y-16">
-            <div class="relative pl-16">
-              <dt class="text-base font-semibold leading-7 text-gray-900">
-                <div class="absolute left-0 top-0 flex h-12 w-12 items-center justify-center rounded-lg bg-blue-600 text-white">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sparkles"><path d="M12 3v12"></path><path d="M12 21v-6"></path><path d="M16.5 6l-4.5 4.5"></path><path d="M7.5 18l4.5-4.5"></path></svg>
-                </div>
-                AI-Powered Asset Creation
-              </dt>
-              <dd class="mt-2 text-base leading-7 text-gray-600">Generate co-branded materials with intelligent, context-aware AI tools.</dd>
-            </div>
-            <div class="relative pl-16">
-              <dt class="text-base font-semibold leading-7 text-gray-900">
-                <div class="absolute left-0 top-0 flex h-12 w-12 items-center justify-center rounded-lg bg-blue-600 text-white">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chart-bar"><path d="M12 20V10"></path><path d="M18 20V4"></path><path d="M6 20v-6"></path></svg>
-                </div>
-                Advanced Tracking
-              </dt>
-              <dd class="mt-2 text-base leading-7 text-gray-600">Precise partner lead attribution with real-time, comprehensive analytics.</dd>
-            </div>
-            <div class="relative pl-16">
-              <dt class="text-base font-semibold leading-7 text-gray-900">
-                <div class="absolute left-0 top-0 flex h-12 w-12 items-center justify-center rounded-lg bg-blue-600 text-white">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-rocket-launch"><path d="M12 2v6l-3 3"></path><path d="M12 8c1.5 0 3-.5 4-1 1-.5 2-1 3-1"></path><path d="M12 8v6l3 3"></path><path d="M12 14c-1.5 0-3 .5-4 1-1 .5-2 1-3 1"></path><path d="M3 21h18"></path></svg>
-                </div>
-                Ecosystem Growth
-              </dt>
-              <dd class="mt-2 text-base leading-7 text-gray-600">Smart partner matching and collaboration tools to accelerate partnerships.</dd>
-            </div>
-          </dl>
-        </div>
-      </div>
-    </div>
+    <!-- Main Content Section -->
+    <div class="content">
+      <h2>Boost Partnership Efficiency and Measure Success</h2>
+      <p>Symbiosys.AI makes it easy for partnership managers to generate co-branded landing pages, track engagement, and accurately attribute leads, freeing up time and maximizing ROI. Let us help you make every partnership count.</p>
 
-    <!-- CTA Section -->
-    <div class="bg-gradient-to-br from-blue-600 to-indigo-700 py-24 sm:py-32">
-      <div class="mx-auto max-w-7xl px-6 lg:px-8">
-        <div class="mx-auto max-w-2xl text-center">
-          <h2 class="text-4xl font-bold tracking-tight text-white">Ready to Supercharge Your Partnerships?</h2>
-          <p class="mx-auto mt-6 max-w-xl text-lg leading-8 text-blue-100">Join innovative B2B companies leveraging AI to transform partnership marketing and drive unprecedented growth.</p>
-          <div class="mt-10 flex items-center justify-center gap-x-6">
-            <a href="#" class="rounded-full bg-white px-5 py-3 text-sm font-semibold text-blue-600 shadow-md transition hover:bg-blue-50">Book a Demo</a>
-            <a href="#" class="text-sm font-semibold leading-6 text-white hover:text-blue-100">Learn More →</a>
-          </div>
+      <!-- Feature List -->
+      <div class="features">
+        <div class="feature">
+          <h3>Automated Landing Pages</h3>
+          <p>Generate sleek, effective landing pages in seconds, customized for each partnership.</p>
+        </div>
+        <div class="feature">
+          <h3>Accurate Lead Attribution</h3>
+          <p>Track the performance of each partnership and attribute leads with precision, cutting down the guesswork.</p>
+        </div>
+        <div class="feature">
+          <h3>Real-Time Analytics</h3>
+          <p>Get real-time insights on campaign performance and make data-driven decisions.</p>
         </div>
       </div>
-    </div>
 
-    <!-- Footer -->
-    <footer class="bg-white">
-      <div class="mx-auto max-w-7xl px-6 py-12 md:flex md:items-center md:justify-between lg:px-8">
-        <div class="flex justify-center space-x-6 md:order-2">
-          <a href="#" class="text-gray-400 hover:text-blue-600">Twitter</a>
-          <a href="#" class="text-gray-400 hover:text-blue-600">LinkedIn</a>
-          <a href="#" class="text-gray-400 hover:text-blue-600">Email</a>
-        </div>
-        <div class="mt-8 md:order-1 md:mt-0">
-          <p class="text-center text-xs leading-5 text-gray-500">
-            &copy; 2024 Symbiosis.ai. All rights reserved.
-          </p>
-        </div>
-      </div>
-    </footer>
+      <!-- Call-to-Action Button -->
+      <a href="#signup" class="cta-button">Get Started for Free</a>
+    </div>
+  </div>
+
+  <!-- Footer Section -->
+  <div class="footer">
+    <p>© 2024 Symbiosys.AI. All Rights Reserved.</p>
   </div>
 
   <script>
-    // Initialize Lucide icons
-    lucide.createIcons();
+    // JavaScript for any interactivity or form submission handling
+    document.querySelector('.cta-button').addEventListener('click', function() {
+      alert('Thank you for your interest! Our team will reach out shortly.');
+    });
   </script>
 </body>
 </html>
