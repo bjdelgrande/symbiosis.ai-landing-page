@@ -78,30 +78,64 @@
       <button class="cta-button" onclick="toggleForm()">Join the Waitlist</button>
 
       <!-- Waitlist Form -->
-      <div class="waitlist-form" id="waitlistForm">
-        <h3>Join the Waitlist</h3>
-        <form>
-          <div class="form-group">
-            <label for="firstName">First Name</label>
-            <input type="text" id="firstName" placeholder="Enter your first name">
-          </div>
-          <div class="form-group">
-            <label for="lastName">Last Name</label>
-            <input type="text" id="lastName" placeholder="Enter your last name">
-          </div>
-          <div class="form-group">
-            <label for="companyName">Company Name</label>
-            <input type="text" id="companyName" placeholder="Enter your company name">
-          </div>
-          <div class="form-group">
-            <label for="email">Work Email</label>
-            <input type="email" id="email" placeholder="Enter your work email">
-          </div>
-          <button type="submit" class="submit-button">Submit</button>
-        </form>
+<div class="waitlist-form" id="waitlistForm">
+    <h3>Join the Waitlist</h3>
+    <form id="waitlistFormElement">
+      <div class="form-group">
+        <label for="firstName">First Name</label>
+        <input type="text" id="firstName" placeholder="Enter your first name" required>
       </div>
-    </div>
+      <div class="form-group">
+        <label for="lastName">Last Name</label>
+        <input type="text" id="lastName" placeholder="Enter your last name" required>
+      </div>
+      <div class="form-group">
+        <label for="companyName">Company Name</label>
+        <input type="text" id="companyName" placeholder="Enter your company name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Work Email</label>
+        <input type="email" id="email" placeholder="Enter your work email" required>
+      </div>
+      <button type="button" class="submit-button" onclick="submitForm()">Submit</button>
+    </form>
   </div>
+  
+  <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzIdjfUSREMIF0KEuJOt-F80709VC4wkFc9YqWVvaUnEL6hAG_n4j_tZhse3Rt8z36P/exec'; // Replace with the web app URL from your Google Apps Script
+  
+    function submitForm() {
+      const form = document.getElementById('waitlistFormElement');
+  
+      // Gather form data
+      const data = {
+        firstName: form.firstName.value,
+        lastName: form.lastName.value,
+        companyName: form.companyName.value,
+        email: form.email.value,
+      };
+  
+      // Send data to Google Apps Script endpoint
+      fetch(scriptURL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+      })
+      .then(response => response.json())
+      .then(data => {
+        if (data.status === 'success') {
+          alert('Thank you for joining the waitlist!');
+          form.reset();
+        } else {
+          alert('There was an error. Please try again.');
+        }
+      })
+      .catch(error => {
+        console.error('Error:', error);
+        alert('There was an error. Please try again.');
+      });
+    }
+  </script>  
 
   <!-- Footer Section -->
   <div class="footer">
